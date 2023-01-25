@@ -1,0 +1,38 @@
+version: "3.9"
+
+networks:
+  web-network:
+
+services:
+  nuxt:
+    build:
+      context: .
+      dockerfile: docker/nuxt3/Dockerfile
+      target: nuxt3
+    volumes:
+      - ./:/home/www
+    ports:
+      - "3000:3000"
+    networks:
+      - web-network
+
+  postgres:
+    build:
+      context: .
+      dockerfile: docker/postgres/Dockerfile
+      target: postgres
+    environment:
+      POSTGRES_PASSWORD: nopassword
+      POSTGRES_USER: admin
+      POSTGRES_DB: smileAtMe
+      PGDATA: /var/lib/postgres
+    volumes:
+      - pg-data:/var/lib/postgres
+    ports:
+      - "5432:5432"
+
+    networks:
+      - web-network
+
+volumes:
+  pg-data:

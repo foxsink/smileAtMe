@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typeorm": "typeorm-ts-node-esm"
+  },
+  "devDependencies": {
+    "nuxt": "^3.1.0"
+  },
+  "dependencies": {
+    "@types/es6-shim": "^0.31.42",
+    "@types/node": "^18.11.18",
+    "pg": "^8.8.0",
+    "reflect-metadata": "^0.1.13",
+    "sass": "^1.57.1",
+    "ts-node": "^10.9.1",
+    "typeorm": "^0.3.11"
+  }
+}

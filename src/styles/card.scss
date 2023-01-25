@@ -1,0 +1,29 @@
+.main-container {
+  flex-direction: column;
+  margin: 100px 100px 0 100px;
+  min-height: 700px;
+  height: 100%;
+  background-color: rgba(100, 10, 10, 0.25);
+  border: 25px solid #40c4c8;
+  border-image: url("~/assets/images/css_border-image-1.png") 29 / 25px round;
+}
+.card-text__p {
+  text-align: center
+}
+.card-text__p:after {
+  content: "Печально, правда?";
+  color: olivedrab;
+  font-style: normal;
+}
+.card-image__img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.card-image__figure {
+  max-height: 600px;
+  max-width: 600px;
+}
+.card-figcaption {
+  text-align: center;
+}
+
