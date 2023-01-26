@@ -6,10 +6,13 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "typeorm": "typeorm-ts-node-esm"
+    "typeorm": "typeorm-ts-node-esm",
+    "prepare-migration-datasource": "esbuild src/data-source.ts --external:'pg-native' --platform=node --bundle --log-level=warning --outfile=migrations/_dataSource.js",
+    "generate-migration": "yarn prepare-migration-datasource && typeorm migration:generate -d migrations/_dataSource.js migrations/migration"
   },
   "devDependencies": {
-    "nuxt": "^3.1.0"
+    "nuxt": "^3.1.0",
+    "ts-node": "^10.9.1"
   },
   "dependencies": {
     "@types/es6-shim": "^0.31.42",
@@ -17,7 +20,7 @@
     "pg": "^8.8.0",
     "reflect-metadata": "^0.1.13",
     "sass": "^1.57.1",
-    "ts-node": "^10.9.1",
-    "typeorm": "^0.3.11"
+    "typeorm": "^0.3.11",
+    "typescript": "^4.9.4"
   }
 }

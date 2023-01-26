@@ -4,7 +4,7 @@ COPY ./docker/nuxt3/entrypoint.sh /usr/local/bin/entrypoint
 
 WORKDIR /home/www
 
-RUN npm install -g sass typeorm && \
+RUN yarn global add sass typeorm && \
     yarn install
 
 ENTRYPOINT ["entrypoint"]
