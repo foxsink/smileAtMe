@@ -36,5 +36,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import "srcDir/styles/component.scss";
+  @import "src/styles/component.scss";
 </style>

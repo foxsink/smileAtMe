@@ -4,13 +4,6 @@ export default defineNuxtConfig({
 
     },
     alias: {
-        srcDir: 'src/',
-        components: "~/src/components",
-        assets: "assets",
+        src: './src/',
     },
-    runtimeConfig: {
-        database: {
-            baseURL: 'localhost:5432',
-        }
-    }
 })

@@ -3,4 +3,4 @@
 set -e
 
 yarn install
-npm run dev
+yarn nuxt dev
