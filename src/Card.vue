@@ -5,7 +5,7 @@
         <figure class="card-image__figure">
           <img
               class="card-image__img"
-              src="~/assets/images/sad-winter.png"
+              src="@/assets/images/sad-winter.png"
               alt="Я и без того знаю, какой ты Петросян"
           >
           <figcaption class="card-figcaption">
@@ -36,5 +36,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import "src/styles/component.scss";
+  @import "@/src/styles/component.scss";
 </style>

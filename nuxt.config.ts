@@ -6,4 +6,11 @@ export default defineNuxtConfig({
     alias: {
         src: './src/',
     },
+    vite: {
+        server: {
+            watch: {
+                usePolling: true
+            }
+        }
+    },
 })

@@ -1,8 +1,5 @@
 version: "3.9"
 
-networks:
-  web-network:
-
 services:
   nuxt:
     build:
@@ -37,3 +34,6 @@ services:
 
 volumes:
   pg-data:
+
+networks:
+  web-network:
