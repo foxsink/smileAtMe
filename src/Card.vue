@@ -1,11 +1,11 @@
 <template>
   <main class="main-container">
-    <div class="card">
+    <div v-for="post in posts" class="card">
       <div class="card-image">
         <figure class="card-image__figure">
           <img
               class="card-image__img"
-              src="@/assets/images/sad-winter.png"
+              :src="`/_nuxt/${post.image_path}`"
               alt="Я и без того знаю, какой ты Петросян"
           >
           <figcaption class="card-figcaption">
@@ -15,13 +15,13 @@
       </div>
       <div class="card-text">
         <p class="card-text__p">
-          В новом 2023 году ты очевидно думал, что холодно будет в Европе
+          {{ post.article }}
         </p>
       </div>
       <div class="card-audio">
         <audio
             class="card-audio__associated-audio"
-            src="assets/audio/directed_by-theme_meme.mp3"
+            :src="`/_nuxt/${post.audio_path}`"
             controls
         ></audio>
       </div>
@@ -29,10 +29,11 @@
   </main>
 </template>
 
-<script>
-export default {
-  name: "Card"
-}
+<script setup>
+
+    const { data: posts } = await useFetch('/api/posts');
+    console.log(posts);
+
 </script>
 
 <style scoped lang="scss">
