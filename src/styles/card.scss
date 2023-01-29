@@ -1,4 +1,6 @@
 .main-container {
+  font-family: "dewberry";
+  font-weight: 1000;
   flex-direction: column;
   margin: 100px 100px 0 100px;
   min-height: 700px;
@@ -8,7 +10,7 @@
   border-image: url("/assets/images/css_border-image-1.png") 29 / 25px round;
 }
 .card-text__p {
-  text-align: center
+  text-align: center;
 }
 .card-text__p:after {
   content: "Печально, правда?";
@@ -16,12 +18,12 @@
   font-style: normal;
 }
 .card-image__img {
-  max-height: 100%;
-  max-width: 100%;
+  width: 70vw;
+  height: 70vh;
 }
 .card-image__figure {
-  max-height: 600px;
-  max-width: 600px;
+  width: 75vw;
+  height: 75vh;
 }
 .card-figcaption {
   text-align: center;
