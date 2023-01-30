@@ -3,4 +3,5 @@
 set -e
 
 yarn
+yarn firstrun
 yarn dev

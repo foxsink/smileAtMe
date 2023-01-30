@@ -5,7 +5,11 @@
     "dev": "rm -rf /tmp/nitro && nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "firstrun": "yarn prisma migrate dev && yarn prisma db seed"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
