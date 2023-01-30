@@ -1,17 +1,14 @@
 <template>
   <NuxtLayout>
-    <default></default>
+    <Card />
   </NuxtLayout>
-  <Card />
 </template>
 
 <script>
 import Card from "~/src/Card.vue";
-import Default from "~/layouts/default.vue";
-
 export default {
   name: "index",
-  components: {Default, Card}
+  components: {Card}
 }
 </script>
 
