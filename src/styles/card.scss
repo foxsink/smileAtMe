@@ -1,27 +1,25 @@
-.card-image__img {
-  width: 100%;
-}
-.card-image__figure {
-  text-align: center;
-}
-.card-text-audio-containers {
-  right: 50%;
-  top: 50%;
-}
 .card {
-  max-width: 100%;
+  width: 100%;
   flex-direction: column;
   padding: 20px;
   justify-content: center;
   display: flex;
   border: 25px solid #40c4c8;
   border-image: url("/assets/images/css_border-image-1.png") 29 / 25px round;
-}
-.card-caption {
-  text-align: center;
-}
-.card-text {
-  text-align: center;
+
+  &__caption {
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__item {
+    & + & {
+      margin-top: 25px;
+    }
+  }
 }
 .card-audio {
   align-self: center;
@@ -33,5 +31,9 @@
 .card-image {
   align-self: center;
   width: 70%;
+
+  &__img {
+    width: 100%;
+  }
 }
 
