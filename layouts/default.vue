@@ -2,21 +2,21 @@
   <header>
     <nav class="navigation">
       <ul class="navigation__list navigation-list">
-        <li class="navigation-list__item navigation-list-item">
-          <nuxt-link href="/" class="navigation-list-item__link">
+        <nuxt-link href="/" class="navigation-list-link">
+          <li class="navigation-list-link__item">
             На главную
-          </nuxt-link>
-        </li>
-        <li class="navigation-list__item navigation-list-item">
-          <nuxt-link href="/card/create" class="navigation-list-item__link">
+          </li>
+        </nuxt-link>
+        <nuxt-link href="/card/create" class="navigation-list-link">
+          <li class="navigation-list-link__item">
             Создать свою карточку
-          </nuxt-link>
-        </li>
-        <li class="navigation-list__item navigation-list-item">
-          <nuxt-link href="/gallery" class="navigation-list-item__link">
-            Карточки других пользователей
-          </nuxt-link>
-        </li>
+          </li>
+        </nuxt-link>
+        <nuxt-link href="/gallery" class="navigation-list-link">
+          <li class="navigation-list-link__item">
+              Карточки других пользователей
+          </li>
+        </nuxt-link>
       </ul>
     </nav>
   </header>
