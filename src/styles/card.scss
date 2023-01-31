@@ -1,31 +1,37 @@
-.main-container {
-  font-family: "dewberry";
-  font-weight: 1000;
+.card-image__img {
+  width: 100%;
+}
+.card-image__figure {
+  text-align: center;
+}
+.card-text-audio-containers {
+  right: 50%;
+  top: 50%;
+}
+.card {
+  max-width: 100%;
   flex-direction: column;
-  margin: 100px 100px 0 100px;
-  min-height: 700px;
-  height: 100%;
-  background-color: rgba(100, 10, 10, 0.25);
+  padding: 20px;
+  justify-content: center;
+  display: flex;
   border: 25px solid #40c4c8;
   border-image: url("/assets/images/css_border-image-1.png") 29 / 25px round;
 }
-.card-text__p {
+.card-caption {
   text-align: center;
 }
-.card-text__p:after {
-  content: "Печально, правда?";
-  color: olivedrab;
-  font-style: normal;
-}
-.card-image__img {
-  width: 70vw;
-  height: 70vh;
-}
-.card-image__figure {
-  width: 75vw;
-  height: 75vh;
-}
-.card-figcaption {
+.card-text {
   text-align: center;
+}
+.card-audio {
+  align-self: center;
+
+  &__associated-audio {
+    max-width: 100%;
+  }
+}
+.card-image {
+  align-self: center;
+  width: 70%;
 }
 
