@@ -1,5 +1,4 @@
 <template>
-  <main class="main-container">
     <div v-for="post in posts" class="card">
       <div class="card-image">
         <figure class="card-image__figure">
@@ -28,7 +27,6 @@
         </audio>
       </div>
     </div>
-  </main>
 </template>
 
 <script setup>

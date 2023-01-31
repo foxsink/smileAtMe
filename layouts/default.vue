@@ -1,18 +1,26 @@
 <template>
   <header>
-    <div class="navigation">
-      <div class="container">
-        <div class="navigation-list">
-          <ul>
-            <li><nuxt-link href="/" class="active">На главную</nuxt-link></li>
-            <li><nuxt-link href="/card/create" class="active">Создать свою карточку</nuxt-link></li>
-            <li><nuxt-link href="/gallery">Карточки других пользователей</nuxt-link></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <nav class="navigation">
+      <ul class="navigation__list navigation-list">
+        <li class="navigation-list__item navigation-list-item">
+          <nuxt-link href="/" class="navigation-list-item__link">
+            На главную
+          </nuxt-link>
+        </li>
+        <li class="navigation-list__item navigation-list-item">
+          <nuxt-link href="/card/create" class="navigation-list-item__link">
+            Создать свою карточку
+          </nuxt-link>
+        </li>
+        <li class="navigation-list__item navigation-list-item">
+          <nuxt-link href="/gallery" class="navigation-list-item__link">
+            Карточки других пользователей
+          </nuxt-link>
+        </li>
+      </ul>
+    </nav>
   </header>
-  <main>
+  <main class="main-container">
     <slot />
   </main>
   <footer>
@@ -26,6 +34,6 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-  @import "Navigation-list";
+<style scoped>
+
 </style>
