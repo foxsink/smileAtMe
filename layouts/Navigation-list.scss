@@ -1,0 +1,19 @@
+.navigation-list {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type:none;
+    letter-spacing: 0.05em;
+    transform: scale(1.2);
+  }
+  a {
+    color: darkred;
+    text-decoration: none;
+    &:hover {
+      box-sizing:border-box;
+      color: lightseagreen;
+      font-style: normal;
+      text-shadow: 1px 0 0 currentColor;
+    }
+  }
+}
