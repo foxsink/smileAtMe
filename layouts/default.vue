@@ -1,6 +1,7 @@
 <template>
   <header>
     <nav class="navigation">
+      <div class="navigation-background"></div>
       <ul class="navigation__list navigation-list">
         <nuxt-link href="/" class="navigation-list-link">
           <li class="navigation-list-link__item">
