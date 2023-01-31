@@ -1,18 +1,23 @@
 <template>
-  <div>
+  <header>
     <div class="navigation">
       <div class="container">
         <div class="navigation-list">
           <ul>
-            <li><a href="#" class="active">На главную</a></li>
-            <li><a href="#">Создать свою карточку</a></li>
-            <li><a href="#">Карточки других пользователей</a></li>
+            <li><nuxt-link href="/" class="active">На главную</nuxt-link></li>
+            <li><nuxt-link href="/card/create" class="active">Создать свою карточку</nuxt-link></li>
+            <li><nuxt-link href="/gallery">Карточки других пользователей</nuxt-link></li>
           </ul>
         </div>
       </div>
     </div>
-  <slot />
-  </div>
+  </header>
+  <main>
+    <slot />
+  </main>
+  <footer>
+Ты лох
+  </footer>
 </template>
 
 <script>
