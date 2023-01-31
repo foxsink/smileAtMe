@@ -1,11 +1,12 @@
 .card {
-  width: 100%;
+  width: 50%;
   flex-direction: column;
   padding: 20px;
   justify-content: center;
   display: flex;
-  border: 25px solid #40c4c8;
-  border-image: url("/assets/images/css_border-image-1.png") 29 / 25px round;
+  border: 25px inset #FFB54D;
+  border-radius: 70px;
+  background: #FFD79D;
 
   &__caption {
     text-align: center;

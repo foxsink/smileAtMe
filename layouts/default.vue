@@ -1,6 +1,6 @@
 <template>
   <div class="body-container">
-    <header>
+    <header class="main-container">
       <nav class="navigation">
         <div class="navigation-background"></div>
         <div class="navigation-border"></div>
@@ -12,12 +12,12 @@
           </nuxt-link>
           <nuxt-link href="/card/create" class="navigation-list-link">
             <li class="navigation-list-link__item">
-              Создать свою карточку
+              Создать карточку
             </li>
           </nuxt-link>
           <nuxt-link href="/gallery" class="navigation-list-link">
             <li class="navigation-list-link__item">
-                Карточки других пользователей
+                Карточки пользователей
             </li>
           </nuxt-link>
         </ul>
@@ -26,7 +26,7 @@
     <main class="main-container">
       <slot />
     </main>
-    <footer>
+    <footer class="main-container">
   Ты лох
     </footer>
   </div>
