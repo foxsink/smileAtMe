@@ -28,7 +28,6 @@
 <script setup>
 
 const { data: posts } = await useFetch('/api/posts');
-console.log(posts);
 
 </script>
 

@@ -12,6 +12,7 @@ model post {
   article     String
   image_path  String   @db.VarChar(255)
   image_title String?  @db.VarChar(255)
+  author      String?  @db.VarChar(70)
   audio_path  String   @db.VarChar(255)
   created_at  DateTime @default(now()) @db.Timestamp(6)
 }
