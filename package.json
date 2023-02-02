@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@prisma/client": "^4.9.0",
+    "nuxt-swiper": "^0.1.9",
     "sass": "^1.57.1"
   }
 }

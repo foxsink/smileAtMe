@@ -1,21 +1,21 @@
 <template>
-  <div v-for="post in posts" class="card">
+  <div class="card">
     <div class="card-image card__item">
       <img
           class="card-image__img"
-          :src="`/_nuxt/${post.image_path}`"
+          :src="`/_nuxt/${cardInfo.image_path}`"
           alt="Я и без того знаю, какой ты Петросян"
       >
     </div>
     <span class="card__caption card__item">
-      {{ post.image_title }}
+      {{ cardInfo.image_title }}
     </span>
     <span class="card__text card__item">
-      {{ post.article }}
+      {{ cardInfo.article }}
     </span>
     <div class="card-audio card__item">
       <audio
-          :src="`/_nuxt/${post.audio_path}`"
+          :src="`/_nuxt/${cardInfo.audio_path}`"
           class="card-audio__associated-audio"
           controls
       >
@@ -25,9 +25,21 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts">
+  export default defineComponent({
+    name: "Card",
+    props: {
+      cardInfo: {
+        type: Object,
+        required: true,
+      }
+    },
+    setup() {
+      return {
 
-const { data: posts } = await useFetch('/api/posts');
+      };
+    },
+  });
 
 </script>
 
