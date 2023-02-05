@@ -3,7 +3,7 @@
     <div class="card-image card__item">
       <img
           class="card-image__img"
-          :src="`/_nuxt/${card.image_path}`"
+          :src="`/public/${card.image_path}`"
           alt="Я и без того знаю, какой ты Петросян"
       >
     </div>
@@ -15,7 +15,7 @@
     </span>
     <div class="card-audio card__item">
       <audio
-          :src="`/_nuxt/${card.audio_path}`"
+          :src="`/public/${card.audio_path}`"
           class="card-audio__associated-audio"
           controls
       >
