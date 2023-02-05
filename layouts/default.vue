@@ -1,6 +1,6 @@
 <template>
   <div class="body-container">
-    <header class="main-container">
+    <header class="main-container main-navigation">
       <nav class="navigation">
         <div class="navigation-background"></div>
         <div class="navigation-border"></div>

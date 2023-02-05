@@ -38,4 +38,10 @@
     display: block;
   }
 }
-
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  &__created-at {
+    text-align: end;
+  }
+}
