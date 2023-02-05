@@ -1,7 +1,5 @@
 <template>
-<nuxt-layout>
   Галерея
-</nuxt-layout>
 </template>
 
 <script>

@@ -1,37 +1,44 @@
 <template>
-  <NuxtLayout>
-    <div class="main-screens">
-      <FirstScreen />
-      <ImageScreen />
-      <TextScreen />
-      <SwiperScreen :cardArray="cardArray" />
-    </div>
-  </NuxtLayout>
+  <NuxtPage />
 </template>
 
-<script lang="ts">
-import FirstScreen from "~/components/FirstScreen.vue";
-import SwiperScreen from "~/components/SwiperScreen.vue";
-import ImageScreen from "~/components/ImageScreen.vue";
-import TextScreen from "~/components/TextScreen.vue";
+<script lang="ts" setup>
+  const router = useRouter();
+  onBeforeUpdate(() => {
+    if (router.currentRoute.value.path === '/') {
+      navigateTo('/welcome');
+    }
+  });
+  if (process.client) {
+    const pagesList = [
+        '/welcome',
+        '/image-example',
+        '/text-example',
+        '/example',
+    ];
+    const pageScrollState = ref(pagesList.indexOf(router.currentRoute.value.path) ?? 0);
+    const isWaiting = ref(false);
 
-export default defineComponent({
-  name: "index",
-  components: {TextScreen, ImageScreen, SwiperScreen, FirstScreen},
-  setup() {
-
-    const {data: cardArray} = useFetch('/api/posts');
-
-    const { $pageScrollState } = useNuxtApp();
-    console.log($pageScrollState);
-
-    return {
-      cardArray,
+    const runTimer = () => {
+      isWaiting.value = true;
+      setTimeout(() => isWaiting.value = false, 500)
     };
-  },
-})
+    const handler = (e: WheelEvent) => {
+      if (!isWaiting.value) {
+        if (e.deltaY > 0 && (pageScrollState.value < (pagesList.length - 1))) {
+          pageScrollState.value += 1;
+        }
+        if (e.deltaY < 0 && (pageScrollState.value > 0)) {
+          pageScrollState.value -= 1;
+        }
+        router.push(`${pagesList[pageScrollState.value]}`)
+        runTimer();
+      }
+    };
+
+    window.addEventListener('wheel', handler);
+  }
 </script>
 
 <style scoped lang="scss">
-  @import "assets/pageStyles/index/component.scss";
 </style>

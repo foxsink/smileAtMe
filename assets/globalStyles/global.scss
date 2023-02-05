@@ -4,6 +4,7 @@ body {
 
 .body-container {
   max-width: 100vw;
+  min-height: 100vh;
 }
 .navigation {
   position: relative;
@@ -95,12 +96,17 @@ body {
 .main-container {
   font-family: "dewberry";
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 100%;
+  min-height: 100%;
+  height: 100%;
   margin-top: 50px;
   &:first-child {
     margin-top: 0;
   }
+}
+.screen-navigation {
+
 }
 .main-navigation {
   position: sticky;

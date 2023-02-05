@@ -25,10 +25,15 @@
     </header>
     <main class="main-container">
       <slot />
+      <div class="screen-navigation">
+        <div class="screen-navigation__up">
+          Выше
+        </div>
+        <div class="screen-navigation__down">
+          Ниже
+        </div>
+      </div>
     </main>
-    <footer class="main-container">
-  Ты лох
-    </footer>
   </div>
 </template>
 

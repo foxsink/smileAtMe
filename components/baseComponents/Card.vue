@@ -48,5 +48,5 @@
 </script>
 
 <style scoped lang="scss">
-  @import "@/src/styles/component.scss";
+  @import "@/assets/styles/base/component.scss";
 </style>
