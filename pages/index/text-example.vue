@@ -6,7 +6,7 @@
 import TextScreen from "~/components/indexComponents/TextScreen.vue";
 
 export default defineComponent({
-  name: "text",
+  name: "text-example",
   components: {TextScreen}
 });
 </script>

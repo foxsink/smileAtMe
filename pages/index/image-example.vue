@@ -6,7 +6,7 @@
 import ImageScreen from "~/components/indexComponents/ImageScreen.vue";
 
 export default defineComponent({
-  name: "image",
+  name: "image-example",
   components: {ImageScreen}
 });
 </script>

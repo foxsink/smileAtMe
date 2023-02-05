@@ -1,23 +1,11 @@
 <template>
   <div class="swiper-screen-container">
     <Swiper
-        :modules="[SwiperAutoplay, SwiperEffectCreative]"
+        :modules="modules"
         :slides-per-view="1"
-        :loop="true"
-        :effect="'creative'"
-        :autoplay="{
-      delay: 8000,
-      disableOnInteraction: true,
-    }"
-        :creative-effect="{
-      prev: {
-        shadow: false,
-        translate: ['-20%', 0, -1],
-      },
-      next: {
-        translate: ['100%', 0, 0],
-      },
-    }"
+        :loop="false"
+        navigation
+        :pagination="{clickable: true}"
     >
       <SwiperSlide
           v-for="card in cardArray"
@@ -31,9 +19,11 @@
 
 <script lang="ts">
 import Card from "~/components/baseComponents/Card.vue";
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import {Navigation, Pagination} from "swiper";
 export default defineComponent({
   name: "SwiperScreen",
-  components: {Card},
+  components: {Card, Swiper, SwiperSlide},
   props: {
 
     cardArray: {
@@ -43,6 +33,7 @@ export default defineComponent({
   },
   setup() {
     return {
+      modules: [Navigation, Pagination],
     }
   }
 });

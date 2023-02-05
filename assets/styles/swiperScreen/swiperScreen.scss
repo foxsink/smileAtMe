@@ -1,4 +1,16 @@
 .swiper-screen-container {
   display: flex;
-  min-height: 100%;
+  height: 100%;
+}
+:deep(.swiper-slide) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:deep(.swiper) {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

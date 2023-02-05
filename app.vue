@@ -11,7 +11,7 @@ export default defineComponent({
     useHead({
       title: 'My awesome site',
       link: [
-        {rel: "icon", type:"image/x-icon", href:'/public/favicon/favicon.ico'}
+        {rel: "icon", type:"image/x-icon", href:'/favicon/favicon.ico'}
       ],
     });
     return {
