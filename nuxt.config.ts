@@ -5,8 +5,15 @@ export default defineNuxtConfig({
     swiper: {
 
     },
-    css: ['@/assets/globalStyles/_variables.scss', '@/assets/globalStyles/global.scss'],
+    css: ['@/assets/globalStyles/global.scss'],
     vite: {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    additionalData: '@import "@/assets/globalStyles/_variables.scss";'
+                }
+            }
+        },
         server: {
             watch: {
                 usePolling: true
@@ -14,4 +21,3 @@ export default defineNuxtConfig({
         }
     },
 })
-

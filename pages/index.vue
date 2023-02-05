@@ -4,7 +4,6 @@
       <FirstScreen />
       <ImageScreen />
       <TextScreen />
-
       <SwiperScreen :cardArray="cardArray" />
     </div>
   </NuxtLayout>
@@ -34,5 +33,5 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-  @import "@/assets/pageStyles/index.scss";
+  @import "assets/pageStyles/index/component.scss";
 </style>
