@@ -10,7 +10,7 @@ export default defineComponent({
   components: {SwiperScreen},
   setup() {
 
-    const {data: cardArray} = useFetch('/api/posts');
+    const {data: cardArray} = useFetch('/api/cards');
 
     return {
       cardArray,

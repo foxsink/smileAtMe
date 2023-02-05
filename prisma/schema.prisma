@@ -7,7 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model post {
+model card {
   id          Int      @id @default(autoincrement())
   article     String
   image_path  String   @db.VarChar(255)

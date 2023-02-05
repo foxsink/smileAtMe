@@ -3,7 +3,7 @@ import {PrismaClient} from "@prisma/client";
 const prisma = new PrismaClient()
 
 export async function main() {
-    return await prisma.post.findMany();
+    return await prisma.card.findMany();
 }
 
 main()
