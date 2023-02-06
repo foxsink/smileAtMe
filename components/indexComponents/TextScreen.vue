@@ -19,5 +19,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
+  @import "assets/styles/textScreen/textScreen.scss";
 </style>
