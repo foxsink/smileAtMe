@@ -15,10 +15,10 @@
     </span>
     <div class="card-audio card__item">
       <audio
-          :src="card.audio_path"
           class="card-audio__associated-audio"
           controls
       >
+        <source :src="card.audio_path" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
     </div>

@@ -20,6 +20,7 @@
     '/welcome',
     '/image-example',
     '/text-example',
+    '/audio-example',
     '/example',
   ];
 
@@ -52,4 +53,5 @@
 </script>
 
 <style scoped lang="scss">
+  @import "@/assets/styles/base/pages/index/index.scss";
 </style>
