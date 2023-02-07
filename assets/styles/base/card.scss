@@ -16,13 +16,15 @@
   &__text {
     text-align: center;
   }
+}
 
-  &__item {
-    & + & {
-      margin-top: 25px;
-    }
+.card-item {
+
+  & + & {
+    margin-top: 25px;
   }
 }
+
 .card-audio {
   align-self: center;
 
@@ -30,22 +32,30 @@
     max-width: 100%;
   }
 }
+
 .card-image {
   display: flex;
   align-self: center;
+  flex-direction: column;
   width: 70%;
   height: 100%;
   justify-content: center;
+
   &__img {
-    max-width: 100%;
+    width: 100%;
     height: 100%;
-    max-height: 100%;
     display: block;
   }
+
+  &__caption {
+    text-align: center;
+  }
 }
+
 .card-footer {
   display: flex;
   justify-content: space-between;
+
   &__created-at {
     text-align: end;
   }

@@ -1,10 +1,10 @@
 <template>
-  <div class="main-card-audio-container">
-    <div class="main-card-audio__description">
-
+  <div class="audio-screen">
+    <div class="audio-screen__description audio-screen-item">
+      Здесь описание экрана с картинкой
     </div>
-    <div class="main-card__audios">
-
+    <div class="audio-screen__pictures audio-screen-item">
+      Здесь картинка экрана с картинкой
     </div>
   </div>
 </template>

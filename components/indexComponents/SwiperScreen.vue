@@ -1,5 +1,5 @@
 <template>
-  <div class="swiper-screen-container">
+  <div class="swiper-screen">
     <Swiper
         :modules="modules"
         :slides-per-view="1"

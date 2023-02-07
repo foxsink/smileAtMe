@@ -1,11 +1,15 @@
 <template>
-  <NuxtPage />
-  <div class="screen-navigation">
-    <div class="screen-navigation__up screen-navigation__item">
-      Выше
+  <div class="index-page">
+    <div class="index-page-content">
+      <NuxtPage />
     </div>
-    <div class="screen-navigation__down screen-navigation__item">
-      Ниже
+    <div class="index-page-navigation">
+      <div class="index-page-navigation__up index-page-navigation-item">
+        Выше
+      </div>
+      <div class="index-page-navigation__down index-page-navigation-item">
+        Ниже
+      </div>
     </div>
   </div>
 </template>

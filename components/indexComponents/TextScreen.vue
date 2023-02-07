@@ -1,9 +1,9 @@
 <template>
-  <div class="main-card-text-container">
-    <div class="main-card-text-container__texts">
+  <div class="text-screen">
+    <div class="text-screen__pictures text-screen-item">
       Здесь картинка экрана с текстом
     </div>
-    <div class="main-card-text-container__description">
+    <div class="text-screen__description text-screen-item">
       Здесь описание экрана с текстом
     </div>
 

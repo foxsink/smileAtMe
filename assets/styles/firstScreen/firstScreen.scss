@@ -1,21 +1,16 @@
-.first-screen-text {
+.first-screen {
   display: flex;
   flex-direction: column;
-  max-width: 50vw;
+  max-width: 75vw;
   align-self: center;
+
+  &__text {
+    font-weight: 600;
+    font-size: $fz_base;
+  }
 }
-.first-screen-text__text-item {
+
+.first-screen-item {
   text-align: center;
   margin-top: 25px;
-  font-weight: 1000;
-  font-size: 0.5cm;
-}
-.first-screen-text__upper {
-
-}
-.first-screen-text__medium {
-
-}
-.first-screen-text__bottom {
-
 }

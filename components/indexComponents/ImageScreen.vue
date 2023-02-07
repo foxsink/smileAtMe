@@ -1,10 +1,10 @@
 <template>
-  <div class="main-card-image-container">
-    <div class="main-card__description">
-      Здесь картинка экрана с картинкой
-    </div>
-    <div class="main-card__images">
+  <div class="image-screen">
+    <div class="image-screen__description image-screen-item">
       Здесь описание экрана с картинкой
+    </div>
+    <div class="image-screen__pictures image-screen-item">
+      Здесь картинка экрана с картинкой
     </div>
   </div>
 </template>
