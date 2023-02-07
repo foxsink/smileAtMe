@@ -3,17 +3,17 @@
   height: 100%;
   width: 100%;
 }
-//:deep(.swiper-slide) {
-//  display: flex;
-//  justify-content: center;
-//  align-items: flex-end;
-//}
-//
-//:deep(.swiper) {
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//}
-//:deep(.swiper-wrapper) {
-//  max-height: 550px;
-//}
+:deep(.swiper-slide) {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+:deep(.swiper) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+:deep(.swiper-wrapper) {
+  max-height: 550px;
+}
