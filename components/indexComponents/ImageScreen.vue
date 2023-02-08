@@ -11,8 +11,8 @@
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div class="image-screen__pictures image-screen-item">
-            Здесь картинка экрана с картинкой
+          <div class="image-screen__picture image-screen-item">
+            <img class="image-screen-item__img" src="@/public/images/screen-pictures/image-example.png" alt="Здесь должнен был быть пример картинок внутри карточек">
           </div>
         </SwiperSlide>
       </Swiper>
