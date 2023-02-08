@@ -57,5 +57,5 @@
 </script>
 
 <style scoped lang="scss">
-  @import "@/assets/styles/base/pages/index/index.scss";
+  @import "@/assets/styles/base/pages/index/component.scss";
 </style>

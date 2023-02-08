@@ -1,5 +1,4 @@
 .card {
-  height: 100%;
   width: 50%;
   flex-direction: column;
   padding: 20px;
@@ -38,12 +37,10 @@
   align-self: center;
   flex-direction: column;
   width: 70%;
-  height: 100%;
   justify-content: center;
 
   &__img {
     width: 100%;
-    height: 100%;
     display: block;
   }
 

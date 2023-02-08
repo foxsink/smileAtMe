@@ -1,19 +1,19 @@
-.swiper-screen-container {
+.swiper-screen {
   display: flex;
   height: 100%;
-  width: 100%;
+  max-width: 100%; //Иначе плохо свайперу
 }
 :deep(.swiper-slide) {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-}
-
-:deep(.swiper) {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  width: 100% !important; //Иначе плохо свайперу
 }
 :deep(.swiper-wrapper) {
-  max-height: 550px;
+  width: 100%;
+}
+:deep(.swiper) {
+  display: flex;
+  --swiper-navigation-sides-offset: calc(1vmax);
+  --swiper-pagination-bottom: 0px;
 }
