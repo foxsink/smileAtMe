@@ -18,6 +18,6 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-  @import "assets/styles/textScreen/textScreen.scss";
+<style lang="scss" scoped>
+  @import "assets/styles/textScreen/component.scss";
 </style>

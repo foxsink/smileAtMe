@@ -1,8 +1,10 @@
 .card {
-  width: 50%;
+  max-height: 80%;
+  max-width: 80%;
+  width: 70%;
   flex-direction: column;
   padding: 20px;
-  justify-content: center;
+  justify-content: space-between;
   display: flex;
   border: 25px inset #FFB54D;
   border-radius: 70px;
@@ -36,7 +38,8 @@
   display: flex;
   align-self: center;
   flex-direction: column;
-  width: 70%;
+  max-width: 70%;
+  max-height: 70%;
   justify-content: center;
 
   &__img {

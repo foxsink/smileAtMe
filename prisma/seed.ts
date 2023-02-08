@@ -27,7 +27,20 @@ async function main() {
             audio_path: '/audio/Chill_in_shlyapa.mp3',
         },
     })
-    console.log(first, second)
+    const third = await prisma.card.upsert({
+        where: {
+            id: 3,
+        },
+        update: {},
+        create: {
+            id: 3,
+            article: 'Проверка навыка телепатии',
+            image_path: '/images/squirrel.jpg',
+            image_title: 'Когда никто не смотрит',
+            audio_path: '/audio/sad_squirrel.mp3',
+        },
+    })
+    console.log(first, second, third)
 }
 main()
     .then(async () => {

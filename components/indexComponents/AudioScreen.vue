@@ -17,6 +17,6 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-  @import "assets/styles/audioScreen/audioScreen.scss";
+<style lang="scss" scoped>
+  @import "assets/styles/audioScreen/component.scss";
 </style>

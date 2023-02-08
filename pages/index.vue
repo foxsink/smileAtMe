@@ -5,10 +5,20 @@
     </div>
     <div class="index-page-navigation">
       <div class="index-page-navigation__up index-page-navigation-item">
-        Выше
+        <span
+            @click.prevent="handler(-1)"
+            class="index-page-navigation__text"
+        >
+          Выше
+        </span>
       </div>
       <div class="index-page-navigation__down index-page-navigation-item">
-        Ниже
+                <span
+                    @click.prevent="handler(1)"
+                    class="index-page-navigation__text"
+                >
+          Ниже
+        </span>
       </div>
     </div>
   </div>
@@ -34,25 +44,25 @@
     isWaiting.value = true;
     setTimeout(() => isWaiting.value = false, 500)
   };
-  const handler = (e: WheelEvent) => {
+  const handler = (delta: number) => {
     if (!isWaiting.value) {
-      if (e.deltaY > 0 && (pageScrollState.value < (pagesList.length - 1))) {
+      if (delta > 0 && (pageScrollState.value < (pagesList.length - 1))) {
         pageScrollState.value += 1;
       }
-      if (e.deltaY < 0 && (pageScrollState.value > 0)) {
+      if (delta < 0 && (pageScrollState.value > 0)) {
         pageScrollState.value -= 1;
-      }
+      }console.log(`${pagesList[pageScrollState.value]}`)
       router.push(`${pagesList[pageScrollState.value]}`)
       runTimer();
     }
   };
   onMounted(() => {
     if (process.client) {
-      window.addEventListener('wheel', handler);
+      window.addEventListener('wheel', (e) => handler(e.deltaY));
     }
   })
   onBeforeUnmount(() => {
-    window.removeEventListener('wheel', handler);
+    window.removeEventListener('wheel', (e) => handler(e.deltaY));
   })
 </script>
 

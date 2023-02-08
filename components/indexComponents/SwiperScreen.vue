@@ -19,13 +19,11 @@
 
 <script lang="ts">
 import Card from "~/components/baseComponents/Card.vue";
-import { Swiper, SwiperSlide } from 'swiper/vue';
 import {Navigation, Pagination} from "swiper";
 export default defineComponent({
   name: "SwiperScreen",
-  components: {Card, Swiper, SwiperSlide},
+  components: {Card},
   props: {
-
     cardArray: {
       type: Array,
       required: true,

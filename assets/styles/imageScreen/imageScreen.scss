@@ -1,0 +1,18 @@
+.image-screen {
+  display: flex;
+  height: 100%;
+  max-width: 100%; //Иначе плохо свайперу
+}
+:deep(.swiper-slide) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+:deep(.swiper-wrapper) {
+  width: 100%;
+}
+:deep(.swiper) {
+  display: flex;
+  --swiper-navigation-sides-offset: calc(1vmax);
+  --swiper-pagination-bottom: 0px;
+}
