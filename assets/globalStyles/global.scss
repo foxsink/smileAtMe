@@ -52,14 +52,22 @@ body {
 
 .navigation-list {
   display: flex;
-  align-items: stretch;
-  justify-content: space-around;
-  padding-left: 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  width: 100%;
+  .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .swiper-slide {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+    }
+  }
 }
 
-.navigation-list-link {
+
+.navigation-list-item {
   $self: &;
   position: relative;
   display: flex;
@@ -92,7 +100,7 @@ body {
       background: #817DE2;
     }
 
-    #{$self}__item {
+    #{$self}__text {
       color: white;
     }
   }
@@ -108,7 +116,7 @@ body {
     }
   }
 
-  &__item {
+  &__text {
     font-size: 16px;
     text-align: center;
     color: white;

@@ -4,23 +4,36 @@
       <nav class="navigation">
         <div class="navigation-background"></div>
         <div class="navigation-border"></div>
-        <ul class="navigation__list navigation-list">
-          <nuxt-link href="/" class="navigation-list-link">
-            <li class="navigation-list-link__item">
-              На главную
-            </li>
-          </nuxt-link>
-          <nuxt-link href="/card/create" class="navigation-list-link">
-            <li class="navigation-list-link__item">
-              Создать карточку
-            </li>
-          </nuxt-link>
-          <nuxt-link href="/gallery" class="navigation-list-link">
-            <li class="navigation-list-link__item">
+        <Swiper
+            :modules="modules"
+            :slides-per-view="1"
+            :loop="false"
+            navigation
+            :pagination="{clickable: true}"
+            class="navigation-list"
+        >
+          <SwiperSlide>
+            <nuxt-link href="/" class="navigation-list-item">
+              <span class="navigation-list-item__text">
+                На главную
+              </span>
+            </nuxt-link>
+          </SwiperSlide>
+          <SwiperSlide>
+            <nuxt-link href="/card/create" class="navigation-list-item">
+              <span class="navigation-list-item__text">
+                Создать карточку
+              </span>
+            </nuxt-link>
+          </SwiperSlide>
+          <SwiperSlide>
+            <nuxt-link href="/gallery" class="navigation-list-item">
+              <span class="navigation-list-item__text">
                 Карточки пользователей
-            </li>
-          </nuxt-link>
-        </ul>
+              </span>
+            </nuxt-link>
+          </SwiperSlide>
+        </Swiper>
       </nav>
     </header>
     <main class="main-container">
@@ -30,8 +43,15 @@
 </template>
 
 <script>
+import {Navigation} from "swiper";
+
 export default {
-  name: "default"
+  name: "default",
+  setup() {
+    return {
+      modules: [Navigation],
+    }
+  }
 }
 </script>
 

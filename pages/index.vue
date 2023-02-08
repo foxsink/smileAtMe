@@ -27,9 +27,6 @@
 <script lang="ts" setup>
   const router = useRouter();
   const path = computed(() => router.currentRoute.value.path);
-  if (path.value === '/') {
-    navigateTo('/welcome');
-  }
   const pagesList = [
     '/welcome',
     '/image-example',
@@ -56,13 +53,25 @@
       runTimer();
     }
   };
+  const wrapper = (e: WheelEvent) => handler(e.deltaY);
+
+  onBeforeMount(() => {
+    if (path.value === '/') {
+      navigateTo('/welcome');
+    }
+    watch(path, (newVal) => {
+      if (newVal === '/') {
+        navigateTo('/welcome');
+      }
+    })
+  })
   onMounted(() => {
     if (process.client) {
-      window.addEventListener('wheel', (e) => handler(e.deltaY));
+      window.addEventListener('wheel', wrapper);
     }
   })
   onBeforeUnmount(() => {
-    window.removeEventListener('wheel', (e) => handler(e.deltaY));
+    window.removeEventListener('wheel', wrapper);
   })
 </script>
 
