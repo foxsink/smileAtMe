@@ -35,21 +35,23 @@
         '/example',
     ];
 
-    const pageScrollState = ref(pagesList.indexOf(path.value) < 0 ? 0 : pagesList.indexOf(path.value));
+    const pageScrollState = computed(() => pagesList.indexOf(path.value));
     const isWaiting = ref(false);
     const runTimer = () => {
         isWaiting.value = true;
-        setTimeout(() => isWaiting.value = false, 500)
+        setTimeout(() => isWaiting.value = false, 350)
     };
     const handler = (delta: number) => {
         if (!isWaiting.value) {
+            const move = ref(0);
+
             if ((delta > 0) && (pageScrollState.value < (pagesList.length - 1))) {
-                pageScrollState.value += 1;
+                move.value = 1;
             }
             if ((delta < 0) && (pageScrollState.value > 0)) {
-                pageScrollState.value -= 1;
+                move.value = -1;
             }
-            router.push(`${pagesList[pageScrollState.value]}`)
+            router.push(`${pagesList[pageScrollState.value + move.value]}`)
             runTimer();
         }
     };
