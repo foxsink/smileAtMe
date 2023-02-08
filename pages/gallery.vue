@@ -1,11 +1,13 @@
 <template>
-  Галерея
+    <div>
+        Галерея
+    </div>
 </template>
 
 <script>
-export default {
-  name: "gallery"
-}
+    export default {
+        name: "Gallery",
+    }
 </script>
 
 <style scoped>

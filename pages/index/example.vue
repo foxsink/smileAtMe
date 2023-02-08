@@ -1,22 +1,22 @@
 <template>
-  <SwiperScreen :card-array="cardArray" />
+    <SwiperScreen :cardArray="cardArray" />
 </template>
 
 <script>
-import SwiperScreen from "~/components/indexComponents/SwiperScreen.vue";
+    import SwiperScreen from "~/components/indexComponents/SwiperScreen.vue";
 
-export default defineComponent({
-  name: "example",
-  components: {SwiperScreen},
-  setup() {
+    export default defineComponent({
+        name: "Example",
+        components: {SwiperScreen},
+        setup() {
 
-    const {data: cardArray} = useFetch('/api/cards');
+            const {data: cardArray} = useFetch('/api/cards');
 
-    return {
-      cardArray,
-    };
-  },
-});
+            return {
+                cardArray,
+            };
+        },
+    });
 </script>
 
 <style scoped>

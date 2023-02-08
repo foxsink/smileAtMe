@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
+
 async function main() {
     const first = await prisma.card.upsert({
         where: {
@@ -40,6 +41,7 @@ async function main() {
             audio_path: '/audio/sad_squirrel-titanik.mp3',
         },
     })
+
     console.log(first, second, third)
 }
 main()

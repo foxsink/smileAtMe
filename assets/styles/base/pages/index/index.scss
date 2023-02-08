@@ -23,3 +23,19 @@
     margin-left: 150px;
   }
 }
+
+:deep(.swiper-slide) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+}
+:deep(.swiper-wrapper) {
+  width: 100%;
+}
+:deep(.swiper) {
+  display: flex;
+  --swiper-navigation-sides-offset: calc(1vmax);
+  --swiper-pagination-bottom: 0px;
+  width: 100%;
+}

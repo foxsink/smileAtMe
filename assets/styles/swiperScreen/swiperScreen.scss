@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   width: 100% !important; //Иначе плохо свайперу
+  max-width: 100%;
 }
 :deep(.swiper-wrapper) {
   width: 100%;

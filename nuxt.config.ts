@@ -6,14 +6,14 @@ export default defineNuxtConfig({
         css: {
             preprocessorOptions: {
                 scss: {
-                    additionalData: '@import "@/assets/globalStyles/_variables.scss";'
-                }
-            }
+                    additionalData: '@import "@/assets/globalStyles/_variables.scss";',
+                },
+            },
         },
         server: {
             watch: {
-                usePolling: true
-            }
-        }
+                usePolling: true,
+            },
+        },
     },
 })
