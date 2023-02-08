@@ -37,7 +37,7 @@ async function main() {
             article: 'Проверка навыка телепатии',
             image_path: '/images/squirrel.jpg',
             image_title: 'Когда никто не смотрит',
-            audio_path: '/audio/sad_squirrel.mp3',
+            audio_path: '/audio/sad_squirrel-titanik.mp3',
         },
     })
     console.log(first, second, third)
