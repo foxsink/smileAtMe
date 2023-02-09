@@ -8,13 +8,13 @@
     export default defineComponent({
         name: "Example",
         components: {SwiperScreen},
+        props: {
+            cardArray: {
+                type: Array,
+                required: true,
+            },
+        },
         setup() {
-
-            const {data: cardArray} = useFetch('/api/cards');
-
-            return {
-                cardArray,
-            };
         },
     });
 </script>

@@ -1,7 +1,7 @@
 <template>
     <div class="index-page">
         <div class="index-page-content">
-            <NuxtPage />
+            <NuxtPage :cardArray="cardArray" />
         </div>
         <div class="index-page-navigation">
             <div class="index-page-navigation__up index-page-navigation-item">
@@ -25,6 +25,7 @@
 </template>
 
 <script lang="ts" setup>
+    const {data: cardArray} = useFetch('/api/cards');
     const router = useRouter();
     const path = computed(() => router.currentRoute.value.path);
     const pagesList = [

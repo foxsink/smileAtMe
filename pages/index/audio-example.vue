@@ -1,5 +1,5 @@
 <template>
-    <AudioScreen />
+    <AudioScreen :audioPathArray="cardArray.map((card) => card.audio_path)" />
 </template>
 
 <script>
@@ -8,6 +8,12 @@
     export default defineComponent({
         name: "AudioExample",
         components: {AudioScreen},
+        props: {
+            cardArray: {
+                type: Array,
+                required: true,
+            },
+        },
     });
 </script>
 
