@@ -2,11 +2,14 @@
     <div class="audio-screen">
         <Swiper
             :modules="modules"
-            :loop="false"
             :slidesPerView="1"
+            :breakpoints="breakpoints"
+            :loop="false"
+            navigation
+            :pagination="{clickable: true}"
         >
             <SwiperSlide>
-                <div class="audio-screen__description audio-screen-item">
+                <div class="audio-screen__description">
                     Здесь описание экрана с картинкой
                 </div>
             </SwiperSlide>

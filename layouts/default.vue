@@ -53,7 +53,7 @@
 </template>
 
 <script>
-    import { Navigation } from 'swiper'
+    import {Navigation} from 'swiper'
 
     export default {
         name: 'Default',

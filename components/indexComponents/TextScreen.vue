@@ -2,8 +2,11 @@
     <div class="text-screen">
         <Swiper
             :modules="modules"
-            :loop="false"
             :slidesPerView="1"
+            :breakpoints="breakpoints"
+            :loop="false"
+            navigation
+            :pagination="{clickable: true}"
         >
             <SwiperSlide>
                 <div class="text-screen__description text-screen-item">

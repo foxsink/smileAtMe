@@ -2,12 +2,17 @@
     <div class="image-screen">
         <Swiper
             :modules="modules"
-            :loop="false"
             :slidesPerView="1"
+            :breakpoints="breakpoints"
+            :loop="false"
+            navigation
+            :pagination="{clickable: true}"
         >
             <SwiperSlide>
                 <div class="image-screen__description image-screen-item">
-                    Здесь описание экрана с картинкой
+                    Справа ты можешь видеть примеры картинок в карточках.<br>
+                    Мы считаем, что создание собственной карточки
+                    должно начинаться именно с картинки, так как она задает основную идею.
                 </div>
             </SwiperSlide>
             <SwiperSlide>
