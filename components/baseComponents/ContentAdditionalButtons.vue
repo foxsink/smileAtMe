@@ -1,14 +1,14 @@
 <template>
     <div
-        v-if="params || false"
         class="additional-content__container"
     >
         <slot>
             <component
-                :is="params.elem"
-                :="params.innerProps"
+                :is="tagData.elem || 'span'"
+                v-if="tagData || false"
+                :="{...tagData.innerProps, ...globalAttrs}"
             >
-                {{ params.text || '' }}
+                {{ tagData.text || '' }}
             </component>
         </slot>
     </div>
@@ -18,7 +18,11 @@
     export default {
         name: "ContentAdditionalButtons",
         props: {
-            params: {
+            tagData: {
+                type: Object,
+                default: () => {},
+            },
+            globalAttrs: {
                 type: Object,
                 default: () => {},
             },

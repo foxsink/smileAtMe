@@ -1,15 +1,13 @@
 <template>
     <div class="card">
         <div class="card-column">
-            <!--            <ContentAdditionalButtons class="card-image card-column-item" />-->
             <ContentAdditionalButtons
-                v-for="(element, index) in elements"
+                v-for="(element, index) in cardsData.elements"
                 :key="`card-column-element-${index}`"
-                :params="element"
-                class="card-column-item"
+                :tagData="element"
+                :globalAttrs="cardsData.globalAttrs"
+                class="card-column__item"
             />
-            <!--            <ContentAdditionalButtons class="card__text card-column-item" />-->
-            <!--            <ContentAdditionalButtons class="card-audio card-column-item" />-->
         </div>
 
 
@@ -34,45 +32,44 @@
         },
         setup(props) {
             const {card} = toRefs(props);
-            const elements = ref([
-                {
-                    // elem: '<img class="card-image__img" alt="Я и без того знаю, какой ты Петросян">',
-                    elem: 'img',
-                    innerProps: {
-                        src: card.value.image_path,
-                        class: "card-image__img",
-                        alt: 'Я и без того знаю, какой ты Петросян',
-                    },
+            const cardsData = ref({
+                globalAttrs: {
+                    class: 'card-column__element',
                 },
-                {
-                    // elem: 'span class="card-image__caption">{{ imageTitle }}</span>',
-                    elem: 'span',
-                    text: card.value.image_title,
-                    innerProps: {
-                        class: "card-image__caption",
+                elements: [
+                    {
+                        elem: 'img',
+                        innerProps: {
+                            src: card.value.image_path,
+                            alt: 'Я и без того знаю, какой ты Петросян',
+                        },
                     },
-                },
-                {
-                    // elem: '<span>{{ article }}</span>',
-                    elem: 'span',
-                    text: card.value.article,
-                },
-                {
-                    // elem: '<audio class="card-audio__associated-audio" type="audio/mpeg" controls>Куда картинку дел!?</audio>',
-                    elem: 'audio',
-                    innerProps: {
-                        src: card.value.audio_path,
-                        class: 'card-audio__associated-audio',
-                        controls: true,
-                        type: 'audio/mpeg',
-                        'v-text': 'Куда картинку дел!?',
+                    {
+                        text: card.value.image_title,
+                        innerProps: {
+                        },
                     },
+                    {
+                        text: card.value.article,
+                        innerProps: {
+                        },
+                    },
+                    {
+                        elem: 'audio',
+                        text: 'Куда картинку дел!?',
+                        innerProps: {
+                            src: card.value.audio_path,
+                            class: 'card-audio',
+                            controls: true,
+                            type: 'audio/mpeg',
+                        },
 
-                },
-            ]);
+                    },
+                ],
+            });
 
             return {
-                elements,
+                cardsData,
             };
         },
     });
@@ -80,5 +77,5 @@
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/styles/base/component.scss";
+@import "assets/styles/base/card/component.scss";
 </style>

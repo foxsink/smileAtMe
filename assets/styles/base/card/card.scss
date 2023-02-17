@@ -1,0 +1,45 @@
+.card {
+  max-height: 80%;
+  max-width: 80%;
+  width: 70%;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: space-between;
+  display: flex;
+  border: 25px inset #FFB54D;
+  border-radius: 70px;
+  background: #FFD79D;
+}
+
+.card-column {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  &__item {
+
+    :deep(#{$self}__element) {
+      width: 100%;
+    }
+
+    & + & {
+      margin-top: 25px;
+    }
+  }
+
+}
+
+.card-audio {
+  max-width: 100%;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+
+  &__created-at {
+    text-align: end;
+  }
+}
