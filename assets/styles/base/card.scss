@@ -19,11 +19,23 @@
   }
 }
 
-.card-item {
+.card-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.card-column-item {
 
   & + & {
     margin-top: 25px;
   }
+}
+
+:deep(.card-image__caption) {
+  display: flex;
+  text-align: center;
 }
 
 .card-audio {
@@ -42,14 +54,14 @@
   max-height: 70%;
   justify-content: center;
 
-  &__img {
-    width: 100%;
-    display: block;
-  }
-
   &__caption {
     text-align: center;
   }
+}
+
+:deep(.card-image__img) {
+  width: 100%;
+  display: block;
 }
 
 .card-footer {

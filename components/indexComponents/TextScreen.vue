@@ -10,7 +10,9 @@
         >
             <SwiperSlide>
                 <div class="text-screen__description text-screen-item">
-                    Здесь описание экрана с картинкой
+                    Вот так будет выглядеть написанный тобой текст.<br>
+                    Краткость - сестра таланта,
+                    но никто не запрещает тебе строить юмор большими текстами.
                 </div>
             </SwiperSlide>
             <SwiperSlide>

@@ -10,7 +10,8 @@
         >
             <SwiperSlide>
                 <div class="audio-screen__description">
-                    Здесь описание экрана с картинкой
+                    Здесь приведены примеры аудиодорожек.<br>
+                    Поддерживаются разрешения mp3 и ogg.
                 </div>
             </SwiperSlide>
             <SwiperSlide>
