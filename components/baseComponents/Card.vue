@@ -46,13 +46,9 @@
                     },
                     {
                         text: card.value.image_title,
-                        innerProps: {
-                        },
                     },
                     {
                         text: card.value.article,
-                        innerProps: {
-                        },
                     },
                     {
                         elem: 'audio',
